@@ -28,9 +28,22 @@ npm install
 
 Start Docker Desktop, then start the application:
 
+reopen in container
+
+run for react
 ```bash
-docker compose -f .devcontainer/compose.yaml up -d --build
+npm run dev
+(OR)
+npm run -- --host
+
 ```
+run for php
+```
+php -S localhost:8000
+(or)
+php -S 0.0.0:8000
+```
+
 
 Open the application in your browser:
 
@@ -42,10 +55,4 @@ The PHP API runs at:
 
 ```text
 http://localhost:8000
-```
-
-To stop the Docker containers:
-
-```bash
-docker compose -f .devcontainer/compose.yaml down
 ```
