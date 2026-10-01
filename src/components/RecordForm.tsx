@@ -33,10 +33,7 @@ function RecordForm({ type }: RecordFormProps) {
         alert("You cannot select a future date.");
         return;
     }
-    if (date > today) {
-        alert("You cannot select a future date.");
-    return;
-    }
+    
 
     const response = await fetch("http://localhost:8000/expenses.php", {
       method: "POST",
