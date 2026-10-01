@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ..:/workspace:cached
-    command: sleep infinity
+    command: php -S 0.0.0.0:8000 -t /workspace/api
     ports:
       - "8000:8000"
       - "5173:5173"
@@ -31,6 +31,7 @@ services:
       - "${MYSQL_PORT:-3306}:3306"
     volumes:
       - mysql-data:/var/lib/mysql
+      - ../database/schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
     healthcheck:
       test:
         [

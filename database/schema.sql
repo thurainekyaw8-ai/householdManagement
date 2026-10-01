@@ -1,0 +1,19 @@
+CREATE DATABASE IF NOT EXISTS household;
+
+USE household;
+
+CREATE TABLE IF NOT EXISTS income (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    category VARCHAR(100) NOT NULL,
+    amount DECIMAL(10, 2) NOT NULL,
+    date DATE NOT NULL,
+    note VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS expense (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    category VARCHAR(100) NOT NULL,
+    amount DECIMAL(10, 2) NOT NULL,
+    date DATE NOT NULL,
+    note VARCHAR(255)
+);

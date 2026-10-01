@@ -1,6 +1,6 @@
 <?php
 
-header("Access-Control-Allow-Origin: http://localhost:5174");
+header("Access-Control-Allow-Origin: http://localhost:5173");
 header("Access-Control-Allow-Methods: GET, POST, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 
@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "OPTIONS") {
 }
 
 $host = "mysql";
-$dbname = "Household";
+$dbname = "household";
 $username = "household";
 $password = "household";
 
