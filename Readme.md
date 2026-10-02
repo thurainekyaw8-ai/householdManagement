@@ -34,7 +34,7 @@ run for react
 ```bash
 npm run dev
 (OR)
-npm run -- --host
+npm run dev-- --host
 
 ```
 run for php
